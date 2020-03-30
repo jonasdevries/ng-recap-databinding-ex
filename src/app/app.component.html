@@ -1,9 +1,17 @@
-<app-game-control (intervalFired)="onIntervalFired($event)" ></app-game-control>
+<div class="container">
+  <div class="row">
+    <app-game-control (intervalFired)="onIntervalFired($event)" ></app-game-control>
+  </div>
 
-<div *ngFor="let oddNumber of oddArray;">
-  <app-odd [oddNumber]="oddNumber" ></app-odd>
-</div>
+  <div class="row">
+    <div *ngFor="let oddNumber of oddArray;">
+      <app-odd [oddNumber]="oddNumber" ></app-odd>
+    </div>
+  </div>
 
-<div *ngFor="let evenNumber of evenArray;" >
-  <app-even [evenNumber]="evenNumber" ></app-even>
+  <div class="row">
+    <div *ngFor="let evenNumber of evenArray;" >
+      <app-even [evenNumber]="evenNumber" ></app-even>
+    </div>
+  </div>
 </div>
