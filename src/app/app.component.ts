@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-databinding-recap-assignment';
+
+  oddArray = [];
+  evenArray = [];
+
+  onIntervalFired(firedNumber: number) {
+    console.log('[app] - ' + firedNumber );
+
+    if(firedNumber % 2 === 0 ){
+      this.evenArray.push(firedNumber);
+    } else {
+      this.oddArray.push(firedNumber);
+    }
+
+  }
+
 }
